@@ -1,5 +1,5 @@
 
 > `docsify-template`：自动生成目录的 docsify 手脚架模板。
 
-[GitHub](https://dengjiawen8955.github.io/docsify-template)
+[GitHub](https://github.com/dengjiawen8955/docsify-template)
 [Get Started](#introduction)
