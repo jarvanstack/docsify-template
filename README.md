@@ -1,10 +1,6 @@
-## start
+## docsify-template
 
-* docsify
-* gitbook-summary: https://github.com/dengjiawen8955/gitbook-summary
-* docker
-* docker-compose
-
+基于 gitbook-summary 自动生成目录的 docsify 模板项目
 
 ## 快速开始
 
@@ -16,6 +12,8 @@ make install
 # 启动
 make serve
 ```
+
+访问: http://localhost:3000
 
 ## 发布 GitHub Page
 

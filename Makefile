@@ -1,3 +1,8 @@
+make_dir:=$(shell pwd)
+app_name:=$(shell basename $(make_dir))
+
+docsDir := docs
+
 ## install: Install docsify and gitbook-summary
 .PHONY: install
 install:
@@ -7,8 +12,7 @@ install:
 ## gen: Gen _sidebar.md file
 .PHONY: gen
 gen:
-	gitbook-summary
-
+	cd $(docsDir) && gitbook-summary && cd $(make_dir)
 ## up: Docker compose up server
 .PHONY: up
 up: gen
@@ -30,7 +34,7 @@ update: push
 ## serve: Docsify serve
 .PHONY: serve
 serve: gen
-	docsify serve .
+	cd $(docsDir) && docsify serve .
 
 ## help: Show this help info.
 .PHONY: help
