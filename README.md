@@ -19,7 +19,10 @@ make serve
 
 ## 发布 GitHub Page
 
-访问地址： https://dengjiawen8955.github.io/doc-template
+Settings -> Pages -> GitHub Action
+
+
+访问地址： https://dengjiawen8955.github.io/docsify-template
 
 
 
