@@ -16,7 +16,7 @@ gen:
 ## up: Docker compose up server
 .PHONY: up
 up: gen
-	docker-compose  -f docker-compose.yaml up  -d
+	docker-compose  -f docker-compose.yaml up  -d --build
 
 ## push: Commit and push to remote repo
 .PHONY: push
@@ -34,7 +34,7 @@ update: push
 ## serve: Docsify serve
 .PHONY: serve
 serve: gen
-	cd $(docsDir) && docsify serve .
+	docsify serve $(docsDir)
 
 ## help: Show this help info.
 .PHONY: help
