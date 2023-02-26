@@ -21,7 +21,7 @@ up:
 ## push: Commit and push to remote repo
 .PHONY: push
 .IGNORE: push
-push:
+push: gen
 	git add .
 	git commit -m "update: Auto commit And push"
 	git push origin master
