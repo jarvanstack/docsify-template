@@ -15,13 +15,13 @@ gen:
 	cd $(docsDir) && gitbook-summary && cd $(make_dir)
 ## up: Docker compose up server
 .PHONY: up
-up: gen
+up:
 	docker-compose  -f docker-compose.yaml up  -d --build
 
 ## push: Commit and push to remote repo
 .PHONY: push
 .IGNORE: push
-push: gen
+push:
 	git add .
 	git commit -m "update: Auto commit And push"
 	git push origin master
@@ -31,7 +31,7 @@ push: gen
 update: push
 	./update_remote.sh
 
-## serve: Docsify serve
+## serve: Docsify serve in dev env
 .PHONY: serve
 serve: gen
 	docsify serve $(docsDir)
