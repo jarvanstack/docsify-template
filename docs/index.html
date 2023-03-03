@@ -26,68 +26,8 @@
 <body>
   <div id="app"></div>
 
-
-  <script>
-    window.$docsify = {
-      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
-      // 字数统计
-      count: {
-        countable: true,
-        fontsize: '0.9em',
-        color: 'rgb(90,90,90)',
-        language: 'chinese'
-      },
-      search: {
-        hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容 
-        paths: 'auto',
-        placeholder: '请输入要搜索的关键字',
-        noData: '没有结果',
-        depth: 6,
-      },
-      auto2top: true, // 滚动时自动回到顶部
-      routerMode: 'hash', // hash | history
-      coverpage: true, // 打开封面
-      loadSidebar: true, // 打开侧边栏
-      subMaxLevel: 2, // 将md中的标题加入目录中的最大等级
-      // 分页
-      pagination: {
-        previousText: 'PREVIOUS',
-        nextText: 'NEXT',
-        crossChapter: true,
-        crossChapterText: true,
-      },
-      plugins: [
-        EditOnGithubPlugin.create(
-          'https://github.com/dengjiawen8955/docsify-template/tree/master/docs/'
-        ),
-      ]
-    }
-
-    // 离线缓存
-    // if (typeof navigator.serviceWorker !== 'undefined') {
-    //   navigator.serviceWorker.register('sw.js')
-    // }
-
-  </script>
-
-  <!-- 评论 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: '2ffc22a5e05bae613680',
-      clientSecret: 'ede43ae617032a9a417447eb825fdbd381650eb4',
-      repo: 'docsify-template',
-      owner: 'dengjiawen8955',
-      admin: ['dengjiawen8955'],
-      id: 'docsify-template', // Ensure uniqueness and length less than 50
-      distractionFreeMode: false
-    });
-  </script>
-
   <!-- 编辑 -->
-  <script src="./_media/js/docsify-edit-on-github.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <!-- cdn -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <!-- 表情 -->
@@ -127,6 +67,69 @@
   <script src="https://notebook.js.org/plugin/js/prism-yaml.js"></script>
   <script src="https://notebook.js.org/plugin/js/prism-go.js"></script>
   <script src="https://notebook.js.org/plugin/js/prism-matlab.js"></script>
+
+  <script>
+    window.$docsify = {
+      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
+      // 字数统计
+      count: {
+        countable: true,
+        fontsize: '0.9em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese'
+      },
+      search: {
+        hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容 
+        paths: 'auto',
+        placeholder: '请输入要搜索的关键字',
+        noData: '没有结果',
+        depth: 6,
+      },
+      auto2top: true, // 滚动时自动回到顶部
+      routerMode: 'hash', // hash | history
+      coverpage: true, // 打开封面
+      loadSidebar: true, // 打开侧边栏
+      subMaxLevel: 2, // 将md中的标题加入目录中的最大等级
+      // 分页
+      pagination: {
+        previousText: 'PREVIOUS',
+        nextText: 'NEXT',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/dengjiawen8955/docsify-template/tree/master/docs/',
+          null,
+          'Edit',
+        ),
+      ]
+    }
+
+    // 离线缓存
+    // if (typeof navigator.serviceWorker !== 'undefined') {
+    //   navigator.serviceWorker.register('sw.js')
+    // }
+
+  </script>
+
+  <!-- 评论 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '2ffc22a5e05bae613680',
+      clientSecret: 'ede43ae617032a9a417447eb825fdbd381650eb4',
+      repo: 'docsify-template',
+      owner: 'dengjiawen8955',
+      admin: ['dengjiawen8955'],
+      id: 'docsify-template', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false
+    });
+  </script>
+
+
+
 
 </body>
 
