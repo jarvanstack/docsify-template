@@ -16,7 +16,7 @@ gen:
 ## up: Docker compose up server
 .PHONY: up
 up:
-	docker-compose  -f docker-compose.yaml up  -d --build
+	docker-compose  -f docker-compose-nginx.yaml up  -d 
 
 ## push: Commit and push to remote repo
 .PHONY: push
@@ -34,12 +34,7 @@ update: push
 ## serve: Docsify serve in dev env
 .PHONY: serve
 serve: gen
-	docsify serve $(docsDir)
-
-## up.nginx: Up with nginx
-.PHONY: up.nginx
-up.nginx:
-	docker-compose  -f docker-compose-nginx.yaml up  -d 
+	docker-compose  -f docker-compose-nginx.yaml up
 
 ## help: Show this help info.
 .PHONY: help
