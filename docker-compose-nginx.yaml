@@ -7,8 +7,3 @@ services:
       - ./docs/:/usr/share/nginx/html/
     ports:
           - "4003:80"
-    networks:
-      - dt_net
-networks:
-  dt_net:
-    driver: bridge
