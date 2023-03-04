@@ -11,63 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
-  <!-- 评论 -->
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-
   <style>
-    /*代码块复制按钮默认隐藏*/
-    .docsify-copy-code-button {
-      display: none;
-    }
 
   </style>
 </head>
 
 <body>
   <div id="app"></div>
-
-  <!-- 编辑 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
-  <!-- cdn -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <!-- 表情 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <!-- 全文搜索 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 图片缩放 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- 代码复制 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 字数统计 -->
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  <!-- 导航栏折叠 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- 翻页 -->
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-
-
-  <!-- 代码高亮 -->
-  <script src="https://notebook.js.org/plugin/prism-c.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-cpp.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-css.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-docker.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-java.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-javascript.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-json.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-latex.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-sql.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-markdown.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-bash.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-php.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-scala.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-nginx.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-json.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-markdown.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-python.js"></script>
-  <script src="https://notebook.js.org/plugin/js/prism-yaml.js"></script>
-  <script src="https://notebook.js.org/plugin/js/prism-go.js"></script>
-  <script src="https://notebook.js.org/plugin/js/prism-matlab.js"></script>
-
   <script>
     window.$docsify = {
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
@@ -97,13 +47,6 @@
         crossChapter: true,
         crossChapterText: true,
       },
-      plugins: [
-        EditOnGithubPlugin.create(
-          'https://github.com/dengjiawen8955/docsify-template/tree/master/docs/',
-          null,
-          'Edit',
-        ),
-      ]
     }
 
     // 离线缓存
@@ -112,24 +55,45 @@
     // }
 
   </script>
+  <!-- cdn -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- 表情 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 全文搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 代码复制 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 导航栏折叠 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
+  <!-- 翻页 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
 
-  <!-- 评论 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: '2ffc22a5e05bae613680',
-      clientSecret: 'ede43ae617032a9a417447eb825fdbd381650eb4',
-      repo: 'docsify-template',
-      owner: 'dengjiawen8955',
-      admin: ['dengjiawen8955'],
-      id: 'docsify-template', // Ensure uniqueness and length less than 50
-      distractionFreeMode: false
-    });
-  </script>
 
-
-
+  <!-- 代码高亮 -->
+  <script src="https://notebook.js.org/plugin/prism-c.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-cpp.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-css.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-docker.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-java.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-javascript.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-json.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-latex.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-sql.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-markdown.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-bash.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-php.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-scala.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-nginx.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-json.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-markdown.min.js"></script>
+  <script src="https://notebook.js.org/plugin/prism-python.js"></script>
+  <script src="https://notebook.js.org/plugin/js/prism-yaml.js"></script>
+  <script src="https://notebook.js.org/plugin/js/prism-go.js"></script>
+  <script src="https://notebook.js.org/plugin/js/prism-matlab.js"></script>
 
 </body>
 
