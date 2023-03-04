@@ -6,4 +6,4 @@ services:
     volumes:
       - ./docs/:/usr/share/nginx/html/
     ports:
-          - "4003:80"
+          - "4002:80"
