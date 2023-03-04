@@ -36,6 +36,11 @@ update: push
 serve: gen
 	docsify serve $(docsDir)
 
+## up.nginx: Up with nginx
+.PHONY: up.nginx
+up.nginx:
+	docker-compose  -f docker-compose-nginx.yaml up  -d 
+
 ## help: Show this help info.
 .PHONY: help
 help: Makefile
