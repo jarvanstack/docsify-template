@@ -34,7 +34,9 @@ update: push
 ## serve: Docsify serve in dev env
 .PHONY: serve
 serve: gen
-	docker-compose  -f docker-compose-nginx.yaml up
+	# 使用 nginx 代理 docs 目录
+	docker run --rm -it -p 4002:80 -v $(make_dir)/docs:/usr/share/nginx/html:ro nginx
+
 
 ## help: Show this help info.
 .PHONY: help
