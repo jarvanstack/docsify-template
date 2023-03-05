@@ -14,7 +14,7 @@ make install
 make serve
 
 # docker-compose 后台启动
-# http://localhost:4002
+# http://localhost:4000
 make up
 ```
 
