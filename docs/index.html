@@ -5,9 +5,12 @@
   <meta charset="UTF-8">
   <!-- logo -->
   <link rel="icon" href="_media/favicon.ico" />
+  
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!-- 主题 -->
   <!-- <link rel="stylesheet" href="_media/css/vue.css"> -->
@@ -19,9 +22,14 @@
   <div id="app">加载中...</div>
   <script src="config.js"></script>
   <script>
-    var myRepo = repo;
-    console.log('myRepo:');
-    console.log(myRepo);
+    console.log('repo:');
+    console.log(repo);
+
+
+    document.title = repo
+    document.querySelector('meta[name="keywords"]').setAttribute('content', keywords);
+    document.querySelector('meta[name="description"]').setAttribute('content', description);
+
   </script>
 
   <script>
@@ -35,7 +43,7 @@
       // mergeNavbar: true,
       maxLevel: 4,
       subMaxLevel: 2,
-      repo: myRepo,
+      repo: repo,
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md' // See #301
@@ -65,7 +73,7 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            let edit_base_url = myRepo + '/blob/master/docs/';
+            let edit_base_url = repo + '/blob/master/docs/';
             let edit_url =
               edit_base_url +
               vm.route.file;
