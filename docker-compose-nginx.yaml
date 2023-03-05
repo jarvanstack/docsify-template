@@ -4,6 +4,6 @@ services:
     image: "nginx:latest"
     container_name: dt_nginx
     volumes:
-      - ./docs/:/usr/share/nginx/html/
+      - ./docs/:/usr/share/nginx/html/dt/
     ports:
           - "4000:80"
