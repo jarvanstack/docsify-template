@@ -40,3 +40,6 @@ Targets:
 ```js
 var repo = 'https://github.com/dengjiawen8955/docsify-template';
 ```
+## 自定义 up 端口
+
+修改 docker-compose.yml 文件中的 4000 端口为你想要的端口
