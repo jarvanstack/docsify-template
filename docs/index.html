@@ -16,15 +16,15 @@
 
 <body>
   <div id="app">加载中...</div>
-  <script type="module">
-    import {repo} from '/config.js';
+  <script src="config.js"></script>
+  <script>
+    var myRepo = repo;
+    console.log('myRepo:');
+    console.log(myRepo);
+  </script>
 
-    // 截取 repo 最后一个 / 之后的内容作为 title
-    let title = repo.substring(repo.lastIndexOf('/') + 1);
-    document.addEventListener('DOMContentLoaded', () => {
-      const titleEl = document.getElementById('title');
-      titleEl.innerText = title;
-    });
+  <script>
+
     window.$docsify = {
       auto2top: true,
       coverpage: true,
@@ -34,7 +34,7 @@
       // mergeNavbar: true,
       maxLevel: 4,
       subMaxLevel: 2,
-      repo: repo,
+      repo: myRepo,
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
       // 字数统计
       count: {
@@ -61,7 +61,7 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            let edit_base_url = repo + '/blob/master/docs/';
+            let edit_base_url = myRepo + '/blob/master/docs/';
             let edit_url =
               edit_base_url +
               vm.route.file;

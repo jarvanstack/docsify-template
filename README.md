@@ -35,4 +35,8 @@ Targets:
 
 ## 自定义 GitHub 仓库
 
-修改 docs/.env 文件中的 `REPO` 变量为你的 GitHub 仓库地址
+修改 docs/config.js 文件
+
+```js
+var repo = 'https://github.com/dengjiawen8955/docsify-template';
+```
