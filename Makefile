@@ -7,7 +7,8 @@ docsDir := docs
 .PHONY: install
 install:
 	# ./scripts/install.docsify.sh
-	./scripts/install.gitbook-summary.sh
+	# ./scripts/install.gitbook-summary.sh
+	go install github.com/dengjiawen8955/gitbook-summary@latest
 
 ## gen: Gen _sidebar.md file
 .PHONY: gen
