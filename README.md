@@ -9,10 +9,12 @@
 # 安装依赖
 make install
 
-# 启动
+# 开发启动调试
+# http://localhost:3000
 make serve
 
 # docker-compose 后台启动
+# http://localhost:4002
 make up
 ```
 
@@ -30,3 +32,7 @@ Targets:
   serve     Docsify serve in dev env
   help      Show this help info.
 ```
+
+## 自定义 GitHub 仓库
+
+修改 docs/.env 文件中的 `REPO` 变量为你的 GitHub 仓库地址

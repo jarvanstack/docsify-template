@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>doc2</title>
+  <title id="title">docsify-template</title>
   <!-- logo -->
   <link rel="icon" href="_media/favicon.ico" />
 
@@ -11,16 +11,20 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!-- 主题 -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="_media/css/vue.css">
 </head>
 
 <body>
   <div id="app">加载中...</div>
-  <script>
-    // 定义变量
-    let repo = 'https://github.com/dengjiawen8955/docsify-template'
+  <script type="module">
+    import {repo} from '/config.js';
 
-
+    // 截取 repo 最后一个 / 之后的内容作为 title
+    let title = repo.substring(repo.lastIndexOf('/') + 1);
+    document.addEventListener('DOMContentLoaded', () => {
+      const titleEl = document.getElementById('title');
+      titleEl.innerText = title;
+    });
     window.$docsify = {
       auto2top: true,
       coverpage: true,
@@ -76,8 +80,6 @@
   </script>
   <!-- cdn -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <!-- 表情 -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script> -->
   <!-- 全文搜索 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- 图片缩放 -->
