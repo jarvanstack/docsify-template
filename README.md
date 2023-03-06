@@ -43,3 +43,10 @@ var repo = 'https://github.com/dengjiawen8955/docsify-template';
 ## 自定义 up 端口
 
 修改 docker-compose.yml 文件中的 4000 端口为你想要的端口
+
+
+## 发布到 github
+
+选择 Settings -> GitHub Pages -> Source -> master branch /docs folder
+
+Github Pages: https://dengjiawen8955.github.io/docsify-template/
