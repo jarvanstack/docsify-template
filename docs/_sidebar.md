@@ -1,6 +1,4 @@
-# 目录
-
-* [](README.md)
+* [README](README.md)
 - ChapterOne
     * [SectionOne](1-ChapterOne/1a-SectionOne.md)
     * [SectionTwo](1-ChapterOne/1b-SectionTwo.md)
