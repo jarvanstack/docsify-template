@@ -38,7 +38,7 @@ Targets:
 修改 docs/config.js 文件
 
 ```js
-var repo = 'https://github.com/dengjiawen8955/docsify-template';
+var repo = 'https://github.com/jarvanstack/docsify-template';
 ```
 ## 自定义 up 端口
 
@@ -49,4 +49,4 @@ var repo = 'https://github.com/dengjiawen8955/docsify-template';
 
 选择 Settings -> GitHub Pages -> Source -> master branch /docs folder
 
-Github Pages: https://dengjiawen8955.github.io/docsify-template/
+Github Pages: https://jarvanstack.github.io/docsify-template/
